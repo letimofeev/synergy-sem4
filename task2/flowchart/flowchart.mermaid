@@ -1,0 +1,26 @@
+flowchart TD
+    A([Начало])
+    B[/Ввод массива A и числа B/]
+    C[count = 0<br/>product = 1<br/>i = 0]
+    D{ i меньше N }
+    E{ A_i больше B }
+    F[count = count + 1<br/>product = product * A_i]
+    G[i = i + 1]
+    H{ count равно 0 }
+    I[product = 0]
+    J[/Вывод count и product/]
+    K([Конец])
+
+    A --> B
+    B --> C
+    C --> D
+    D -- Да --> E
+    D -- Нет --> H
+    E -- Да --> F
+    E -- Нет --> G
+    F --> G
+    G --> D
+    H -- Да --> I
+    H -- Нет --> J
+    I --> J
+    J --> K

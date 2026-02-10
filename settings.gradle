@@ -8,3 +8,4 @@ plugins {
 }
 rootProject.name = 'synergy-sem4'
 include 'task1'
+include 'task2'
