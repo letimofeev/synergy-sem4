@@ -1,0 +1,21 @@
+flowchart TD
+    A([Начало])
+    B[/Ввод массива A размерности N/]
+    C[sum = 0<br/>count = 0<br/>i = 0]
+    D{ i меньше N }
+    E{ элемент положительный }
+    F[sum = sum + A_i<br/>count = count + 1]
+    G[i = i + 1]
+    H[/Вывод sum и count/]
+    I([Конец])
+
+    A --> B
+    B --> C
+    C --> D
+    D -- Да --> E
+    D -- Нет --> H
+    E -- Да --> F
+    E -- Нет --> G
+    F --> G
+    G --> D
+    H --> I
